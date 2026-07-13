@@ -49,8 +49,7 @@
         }
 
         .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
+            margin-top: 50px;
             font-size: 2rem;
             color: #fff;
             animation: bounce 2s infinite;
@@ -221,7 +220,7 @@
             object-fit: cover;
             border-radius: 0;
             display: block;
-            margin: 0 auto;
+            margin: 0;
             filter: grayscale(0%);
             transition: filter 0.4s ease, transform 0.4s ease;
         }
@@ -238,8 +237,8 @@
         }
 
         .dupla-logo {
-            width: 180px;
-            height: 180px;
+            width: 360px;
+            height: 360px;
             object-fit: contain;
             display: block;
             margin: 0 auto;
@@ -528,6 +527,16 @@
 
             <div class="movie-card has-image">
                 <div class="afiche">
+                    <img src="contenido/CUANDO OSCURECE.jpeg" alt="Cuando oscurece">
+                    <div class="afiche-overlay">
+                        <h3>Cuando oscurece</h3>
+                        <button class="trailer-btn" data-video="contenido/CUANDO OSCURECE.mp4">Ver Trailer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card has-image">
+                <div class="afiche">
                     <img src="contenido/CIENCIAS NATURALES.jpg" alt="Ciencias Naturales">
                     <div class="afiche-overlay">
                         <h3>Ciencias Naturales</h3>
@@ -551,7 +560,7 @@
                     <img src="contenido/AZOR.jpg" alt="Azor">
                     <div class="afiche-overlay">
                         <h3>Azor</h3>
-                        <button class="trailer-btn" data-youtube="COHNFsC8o18">Ver Trailer</button>
+                        <button class="trailer-btn" data-youtube="h4uR0fjm4b4">Ver Trailer</button>
                     </div>
                 </div>
             </div>
@@ -565,23 +574,14 @@
                     </div>
                 </div>
             </div>
-
-            <div class="movie-card has-image">
-                <div class="afiche">
-                    <img src="contenido/CUANDO OSCURECE.jpeg" alt="Cuando oscurece">
-                    <div class="afiche-overlay">
-                        <h3>Cuando oscurece</h3>
-                        <button class="trailer-btn" data-video="contenido/CUANDO OSCURECE.mov">Ver Trailer</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <section class="dupla-section">
         <div class="dupla-fotos">
             <img src="contenido/PAULINA 2.jpeg" alt="Paulina Zoboli" class="dupla-foto">
-            <img src="contenido/SOLE.jpeg" alt="Soledad San Martín" class="dupla-foto">
+            <img src="contenido/logo 2.jpg" alt="Logo" class="dupla-logo">
+            <img src="contenido/SOLE 2.jpeg" alt="Soledad San Martín" class="dupla-foto">
         </div>
         <div class="dupla-texto">
             <h2>PRODUCCIÓN - BÚSQUEDA - ENTRENAMIENTO ACTORAL</h2>
@@ -599,7 +599,6 @@
             <a href="mailto:paulinazoboli@gmail.com" class="contacto-btn email">✉️ Email</a>
             <a href="tel:+541168901701" class="contacto-btn telefono">📞 Teléfono</a>
             <a href="https://wa.me/541168901701" target="_blank" class="contacto-btn whatsapp">💬 WhatsApp</a>
-            <a href="https://instagram.com/banda.aparte" target="_blank" class="contacto-btn instagram">📸 Instagram</a>
         </div>
     </section>
 
