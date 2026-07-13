@@ -392,8 +392,9 @@
             .movie-card { width: 100%; max-width: 320px; min-height: 220px; padding: 30px 20px; flex-basis: auto; }
             .movie-card.has-image { padding: 0; }
             .movie-card .afiche { height: 460px; }
-            .movie-card.has-image .afiche-overlay { opacity: 1; background: rgba(0,0,0,0.6); border-radius: 15px; }
-            .movie-card.has-image .afiche img { filter: brightness(0.7); }
+            .movie-card.has-image .afiche-overlay { opacity: 0; background: rgba(0,0,0,0.7); border-radius: 15px; transition: opacity 0.3s ease; }
+            .movie-card.has-image.touched .afiche-overlay { opacity: 1; }
+            .movie-card.has-image .afiche img { filter: none; }
             .movie-card h3 { font-size: 1.1rem; }
             .dupla-section { padding: 50px 20px 40px; }
             .dupla-fotos { gap: 8px; }
@@ -659,6 +660,18 @@
             // Cerrar con la X
             document.querySelectorAll('.modal .close-btn').forEach(function(btn) {
                 btn.addEventListener('click', closeModal);
+            });
+
+            // En mobile: al tocar el afiche se muestra el overlay con el botón de trailer
+            document.querySelectorAll('.movie-card.has-image').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    if (window.matchMedia('(hover: none)').matches) {
+                        document.querySelectorAll('.movie-card.has-image.touched').forEach(function(c) {
+                            if (c !== card) c.classList.remove('touched');
+                        });
+                        card.classList.toggle('touched');
+                    }
+                });
             });
 
             // Cerrar al hacer click fuera del video
