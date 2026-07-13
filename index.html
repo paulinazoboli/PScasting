@@ -378,27 +378,47 @@
         }
 
         @media (max-width: 900px) {
-            .movie-card { flex-basis: calc(50% - 10px); max-width: none; }
+            .movie-card { flex-basis: calc(50% - 10px); max-width: 320px; }
             .movie-card .afiche { height: 380px; }
         }
 
         @media (max-width: 768px) {
-            .logo-section .logo { max-width: 360px; width: 85%; }
-            .intro p { font-size: 0.95rem; padding: 0 10px; }
-            .section-title { font-size: 1.5rem; letter-spacing: 3px; }
-            .trailers-grid { flex-direction: row; }
-            .movie-card { width: 100%; max-width: 350px; min-height: 220px; padding: 30px 20px; flex-basis: auto; }
+            .logo-section { padding: 30px 20px; }
+            .logo-section .logo { max-width: 260px; width: 80%; margin-bottom: 35px; }
+            .intro p { font-size: 0.95rem; padding: 0 10px; line-height: 1.7; }
+            .section-title { font-size: 1.3rem; letter-spacing: 2px; margin-bottom: 30px; }
+            .trailers-section { padding: 30px 20px; }
+            .trailers-grid { flex-direction: column; align-items: center; gap: 20px; }
+            .movie-card { width: 100%; max-width: 320px; min-height: 220px; padding: 30px 20px; flex-basis: auto; }
             .movie-card.has-image { padding: 0; }
-            .movie-card .afiche { height: 480px; }
+            .movie-card .afiche { height: 460px; }
             .movie-card.has-image .afiche-overlay { opacity: 1; background: rgba(0,0,0,0.6); border-radius: 15px; }
             .movie-card.has-image .afiche img { filter: brightness(0.7); }
             .movie-card h3 { font-size: 1.1rem; }
-            .dupla-fotos { gap: 10px; }
-            .dupla-foto { width: 140px; height: 180px; }
-            .dupla-texto h2 { font-size: 1.1rem; letter-spacing: 3px; }
+            .dupla-section { padding: 50px 20px 40px; }
+            .dupla-fotos { gap: 8px; }
+            .dupla-foto { width: 100px; height: 130px; }
+            .dupla-logo { width: 180px; height: 180px; }
+            .dupla-texto h2 { font-size: 1rem; letter-spacing: 2px; }
             .dupla-texto p { font-size: 0.85rem; }
+            .contacto-section { padding: 50px 20px; }
+            .contacto-section h2 { font-size: 1.4rem; letter-spacing: 3px; margin-bottom: 30px; }
             .contacto-buttons { flex-direction: column; align-items: center; }
-            .contacto-btn { width: 250px; justify-content: center; }
+            .contacto-btn { width: 260px; justify-content: center; padding: 13px 25px; font-size: 0.95rem; }
+            .scroll-indicator { margin-top: 35px; font-size: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .logo-section .logo { max-width: 220px; }
+            .intro p { font-size: 0.9rem; }
+            .section-title { font-size: 1.15rem; letter-spacing: 1.5px; }
+            .movie-card { max-width: 280px; }
+            .movie-card .afiche { height: 420px; }
+            .dupla-foto { width: 85px; height: 110px; }
+            .dupla-logo { width: 150px; height: 150px; }
+            .dupla-texto h2 { font-size: 0.9rem; letter-spacing: 1.5px; }
+            .dupla-texto p { font-size: 0.8rem; }
+            .contacto-btn { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
